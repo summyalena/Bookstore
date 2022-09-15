@@ -1,0 +1,11 @@
+.book-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comment-container {
+    display: flex;
+    gap: 10px;
+}
+
