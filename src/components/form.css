@@ -1,11 +1,10 @@
 .form {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-    margin: 0 9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin: 0 9em;
 }
 
 .input {
@@ -17,20 +16,20 @@
 }
 
 input {
-    width: 55%;
-    padding: 0.7em;
+  width: 55%;
+  padding: 0.7em;
 }
 
 .input select {
-    padding: 0.7em 1.7em;
+  padding: 0.7em 1.7em;
 }
 
 .input button {
-    padding: 0.6em 1.7em;
+  padding: 0.6em 1.7em;
 }
 
-@media (max-width:990px) {
-    .form {
-        margin: 0;
-    }
+@media (max-width: 990px) {
+  .form {
+    margin: 0;
+  }
 }
