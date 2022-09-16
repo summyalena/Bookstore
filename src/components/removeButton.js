@@ -2,7 +2,9 @@ import React from 'react';
 
 function removeButton() {
   return (
-    <div />
+    <div>
+      <button type="button" id="remove">Remove</button>
+    </div>
   );
 }
 
