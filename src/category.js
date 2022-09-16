@@ -1,13 +1,11 @@
-/* eslint-disable */
-
-import React from 'react'
+import React from 'react';
 
 function category() {
   return (
     <div>
-      Category
+      <button type="button" id="check-status">Check Status</button>
     </div>
-  )
+  );
 }
 
-export default category
+export default category;
