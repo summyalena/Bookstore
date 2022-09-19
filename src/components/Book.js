@@ -1,8 +1,11 @@
+/*eslint-disable */
 import React from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
 import Remove from './removeButton';
 import './Book.css';
 
 function book(props) {
+ 
   return (
     <div className="book-container">
       <div className="first-div">
@@ -11,7 +14,7 @@ function book(props) {
         <p>{props.author}</p>
         <div className="comment-container">
           <button type="button">Comments</button>
-          <Remove />
+          <Remove id={props.id} />
           <button type="button">Edit</button>
         </div>
       </div>

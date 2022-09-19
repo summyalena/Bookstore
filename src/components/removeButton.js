@@ -1,9 +1,9 @@
 import React from 'react';
 
-function removeButton() {
+function removeButton({ id }) {
   return (
     <div>
-      <button type="button" id="remove">Remove</button>
+      <button id={id} type="button">Remove</button>
     </div>
   );
 }
