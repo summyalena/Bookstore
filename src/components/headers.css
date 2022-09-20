@@ -1,0 +1,13 @@
+.Headers {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  height: 20%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
