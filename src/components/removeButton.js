@@ -1,11 +1,11 @@
 import React from 'react';
 
-function removeButton({ id }) {
+function RemoveButton({ removeBook }) {
   return (
     <div>
-      <button id={id} type="button">Remove</button>
+      <button onClick={removeBook} type="button">Remove</button>
     </div>
   );
 }
 
-export default removeButton;
+export default RemoveButton;
