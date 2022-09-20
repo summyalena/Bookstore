@@ -1,20 +1,25 @@
-/*eslint-disable */
+// /*eslint-disable */
 import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { actions } from '../redux/books/books';
 import Remove from './removeButton';
 import './Book.css';
 
-function book(props) {
- 
+function Book({ id, title, author }) {
+  const dispatch = useDispatch();
+
+  const removeBook = () => {
+    dispatch(actions.REMOVEBOOK({ id }));
+  };
   return (
     <div className="book-container">
       <div className="first-div">
         <span>Action</span>
-        <h4>{props.title}</h4>
-        <p>{props.author}</p>
+        <h4>{title}</h4>
+        <p>{author}</p>
         <div className="comment-container">
           <button type="button">Comments</button>
-          <Remove id={props.id} />
+          <Remove removeBook={removeBook} />
           <button type="button">Edit</button>
         </div>
       </div>
@@ -31,5 +36,4 @@ function book(props) {
     </div>
   );
 }
-
-export default book;
+export default Book;
