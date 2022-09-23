@@ -1,15 +1,17 @@
 // /*eslint-disable */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { actions } from '../redux/books/books';
 import Remove from './removeButton';
 import './Book.css';
+import { removeBook, fetchBooks } from '../redux/books/books';
 
 function Book({ id, title, author }) {
   const dispatch = useDispatch();
 
-  const removeBook = () => {
-    dispatch(actions.REMOVEBOOK({ id }));
+  const removeBooks = () => {
+    console.log(id);
+    dispatch(removeBook(id));
+    dispatch(fetchBooks());
   };
   return (
     <div className="book-container">
@@ -19,7 +21,7 @@ function Book({ id, title, author }) {
         <p>{author}</p>
         <div className="comment-container">
           <button type="button">Comments</button>
-          <Remove removeBook={removeBook} />
+          <Remove removeBooks={removeBooks} />
           <button type="button">Edit</button>
         </div>
       </div>
