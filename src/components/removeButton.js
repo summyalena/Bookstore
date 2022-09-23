@@ -1,9 +1,9 @@
 import React from 'react';
 
-function RemoveButton({ removeBook }) {
+function RemoveButton({ removeBooks }) {
   return (
     <div>
-      <button onClick={removeBook} type="button">Remove</button>
+      <button onClick={removeBooks} type="button">Remove</button>
     </div>
   );
 }
