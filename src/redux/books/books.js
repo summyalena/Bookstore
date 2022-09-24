@@ -6,7 +6,6 @@ const API = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 
 export const fetchBooks = createAsyncThunk('fetch-books', async () => {
   const response = await axios.get(API);
-  // console.log(response);
   const result = await response.data;
   const book = Object.entries(result).map((res) => ({
     id: res[0],
@@ -22,7 +21,8 @@ export const postBooks = createAsyncThunk('post-data', async (data) => {
     headers: {
       'content-Type': 'application/json',
     },
-  }).then((data) => data.json);
+  });
+
   return response;
 });
 
@@ -35,7 +35,6 @@ export const removeBook = createAsyncThunk('delete/REMOVEBOOK', async (id) => {
 
 const initialState = {
   books: [],
-  loading: false,
 };
 
 const bookSlice = createSlice({
@@ -50,19 +49,13 @@ const bookSlice = createSlice({
     },
   },
   extraReducers: {
-    [fetchBooks.pending]: (state) => {
-      state.loading = true;
-    },
     [fetchBooks.fulfilled]: (state, action) => {
       state.loading = false;
       state.books = action.payload;
     },
-    [fetchBooks.rejected]: (state) => {
-      state.loading = false;
+    [postBooks.fulfilled]: (state, action) => {
+      state.books = [...state.books, action.payload];
     },
-    // [postBooks.fulfilled]: (state, action) => {
-    //   state.books = [...state.books, action.payload];
-    // },
   },
 });
 

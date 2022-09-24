@@ -1,13 +1,25 @@
-import Book from './components/BooksDisplay';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import BooksDisplay from './components/BooksDisplay';
 import Headers from './components/headers';
+import { fetchBooks } from './redux/books/books';
+import './App.css';
 
 function App() {
+  const books = useSelector((state) => state.books.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch, books]);
+
   return (
     <>
-      <Headers />
-      <Book />
+      <div className="container">
+        <Headers />
+        <BooksDisplay books={books} />
+      </div>
     </>
-
   );
 }
 
