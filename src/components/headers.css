@@ -16,16 +16,25 @@
 }
 
 .nav h1 {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 900;
   font-family: 'Montserrat', serif;
   color: #0290ff;
 }
 
 .nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
+  font-size: 1em;
   align-items: center;
+}
+
+.nav ul:active {
+  color: black;
+}
+
+.nav ul:hover {
+  color: black;
 }
 
 .header span {
@@ -38,22 +47,29 @@
   color: #0290ff;
 }
 
-@media screen and (min-width: 768px) {
+@media (max-width: 790px) {
   .header {
-    padding: 1em 6em;
-  }
-
-  .header span {
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0.5em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav {
-    gap: 2rem;
+    display: flex;
+    list-style: none;
+    gap: 0.2rem;
+    width: 100%;
+    align-items: center;
   }
 
   .nav h1 {
-    font-size: 2rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+    font-family: 'Montserrat', serif;
+    color: #0290ff;
   }
 }
