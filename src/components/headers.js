@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import { FaUser } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import './headers.css';
 
 function Headers() {
@@ -17,7 +17,7 @@ function Headers() {
         </ul>
       </nav>
       <span>
-        {/* <FaUser /> */}
+        <FaUser />
       </span>
     </header>
   );
