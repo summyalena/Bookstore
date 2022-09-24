@@ -1,13 +1,59 @@
-.Headers {
+.header {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  z-index: 1000;
-  height: 20%;
+  padding: 0.8em 1.5em;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+.nav {
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Montserrat', serif;
+  color: #0290ff;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header span {
+  border-radius: 50%;
+  border: 1px solid #c4bfbf;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  color: #0290ff;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1em 6em;
+  }
+
+  .header span {
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav {
+    gap: 2rem;
+  }
+
+  .nav h1 {
+    font-size: 2rem;
+  }
 }
