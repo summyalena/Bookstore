@@ -17,9 +17,9 @@ function Form() {
     setAuthor(e.target.value);
   };
 
-  const handleCategoryHandler = (e) => {
-    setCategory(e.target.value);
-  };
+  // const handleCategoryHandler = (e) => {
+  //   setCategory(e.target.value);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,14 +52,25 @@ function Form() {
           placeholder="Book author"
           name="author"
         />
-        <input
+        {/* <input
           onChange={handleCategoryHandler}
           id="category"
           value={category}
           type="text"
           placeholder="Book Category"
           name="category"
-        />
+        /> */}
+        <select>
+          <option value={category}>
+            Comedy
+          </option>
+          <option value={category}>
+            horror
+          </option>
+          <option value={category}>
+            Thriller
+          </option>
+        </select>
         <button type="submit">ADD BOOK</button>
       </div>
     </form>

@@ -17,7 +17,9 @@ function App() {
     <>
       <div className="container">
         <Headers />
-        <BooksDisplay books={books} />
+        <div className="booksDisplay">
+          <BooksDisplay books={books} />
+        </div>
       </div>
     </>
   );
