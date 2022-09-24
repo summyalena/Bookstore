@@ -1,17 +1,14 @@
 // /*eslint-disable */
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import Remove from './removeButton';
 import './Book.css';
-import { removeBook, fetchBooks } from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 
 function Book({ id, title, author }) {
   const dispatch = useDispatch();
 
   const removeBooks = () => {
-    console.log(id);
     dispatch(removeBook(id));
-    dispatch(fetchBooks());
   };
   return (
     <div className="book-container">
@@ -26,9 +23,7 @@ function Book({ id, title, author }) {
         </div>
       </div>
 
-      <div className="spin-update">
-        64% completed
-      </div>
+      <div className="spin-update">64% completed</div>
 
       <div className="third-div">
         <span>CURRENT CHAPTER</span>
