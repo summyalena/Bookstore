@@ -1,10 +1,102 @@
 .book-container {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
   align-items: center;
+  margin-top: 1em;
+  padding: 0 1em;
+  gap: 12em;
+  z-index: 500;
+  background-color: white;
+  border: 0.05em solid #e8e8e8;
+  margin-bottom: 2em;
+}
+
+.first-div {
+  display: flex;
+  margin-top: 1em;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.first-div span {
+  color: #8888;
+  font-size: 0.9em;
+  font-weight: 800;
+}
+
+.first-div h4 {
+  color: #121212;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.first-div p {
+  color: #84b0d6;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+  margin-bottom: 1em;
 }
 
 .comment-container {
   display: flex;
-  gap: 10px;
+  gap: 1.5em;
+}
+
+.comment-container button {
+  background-color: transparent;
+  border: none;
+  color: #78a8d1;
+  border-right: 1px solid #e8e8e8;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+  font-size: 1.1em;
+  padding-right: 1em;
+  border-spacing: 1em;
+}
+
+.third-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.third-div input {
+  padding: 0.9em 1.9em;
+  background-color: #0290ff;
+  color: white;
+  width: 110%;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.third-div input::placeholder {
+  color: white;
+}
+
+.third-div input:hover {
+  background-color: #0291ff85;
+}
+
+.comment-container button:last-child {
+  border: none;
+}
+
+.border {
+  width: 100%;
+  height: 0.2em;
+  margin-bottom: 1em;
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 790px) {
+  .book-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 1em;
+    z-index: 500;
+    background-color: white;
+    border: 0.05em solid #e8e8e8;
+    margin-bottom: 2em;
+  }
 }
