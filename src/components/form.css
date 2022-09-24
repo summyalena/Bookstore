@@ -1,24 +1,46 @@
 .form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
 }
 
 .input {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 3em;
   width: 100%;
+}
+
+.input h4 {
+  color: #959595;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 input {
   padding: 0.9em 0.2em;
+  border: 0.1em solid #959595;
+  background-color: white;
+  color: #959595;
+  width: 35%;
 }
 
 .input select {
+  width: 35%;
   padding: 0.7em 1.7em;
+  color: #959595;
+  border: 0.1em solid #959595;
+  background-color: white;
 }
 
 .input button {
   padding: 0.9em 1.9em;
+  width: 30%;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
 }
 
 @media (max-width: 990px) {

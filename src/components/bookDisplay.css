@@ -1,7 +1,8 @@
-.container {
-  width: 100%;
+.books-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  background-color: rgb(250, 250, 250);
 }

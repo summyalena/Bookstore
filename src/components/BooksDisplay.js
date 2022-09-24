@@ -7,7 +7,7 @@ function BooksDisplay({ books }) {
   ));
 
   return (
-    <div className="container">
+    <div className="books-container">
       {list}
       <Form />
     </div>
