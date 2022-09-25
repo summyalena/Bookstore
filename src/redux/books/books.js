@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -50,10 +49,13 @@ const bookSlice = createSlice({
   },
   extraReducers: {
     [fetchBooks.fulfilled]: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.loading = false;
+      // eslint-disable-next-line no-param-reassign
       state.books = action.payload;
     },
     [postBooks.fulfilled]: (state, action) => {
+      // eslint-disable-next-line no-param-reassign
       state.books = [...state.books, action.payload];
     },
   },

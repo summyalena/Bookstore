@@ -1,4 +1,3 @@
-// /*eslint-disable */
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { Circle } from 'rc-progress';
